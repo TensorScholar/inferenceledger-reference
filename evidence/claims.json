@@ -1,0 +1,39 @@
+{
+  "schema": "showcase.claims/v3",
+  "project": "InferenceLedger",
+  "snapshot": "e36b86a4f39ffb80bf8ea89607fc00cd2e2bfbce",
+  "claims": [
+    {
+      "id": "IL-HIST-001",
+      "hero": true,
+      "statement": "On the committed five-request JSON-contract smoke, candidate had 69.96% lower calculated cost with 5/5 successes and 100% deterministic validator pass on both sides.",
+      "evidence_maturity": "L2",
+      "scope": "2026-07-03 one-endpoint smoke; one run per strategy; calculated cost from observed usage + repository pricing table.",
+      "falsification_condition": "Frozen benchmark report does not contain the published values or workloads differ.",
+      "limitations": [
+        "Not provider billing proof.",
+        "Not broad semantic-quality parity.",
+        "Zero retries observed; retry economics out of scope for this run.",
+        "Not validation of the current commercial thesis."
+      ]
+    },
+    {
+      "id": "IL-COST-002",
+      "hero": true,
+      "statement": "Current head represents provider attempts explicitly and preserves unknown/partial cost semantics instead of converting ambiguous execution cost to zero.",
+      "evidence_maturity": "L1",
+      "scope": "Current development-head attempt/cost evidence model + reference implementation.",
+      "falsification_condition": "A failed/retried attempt with unknown monetary evidence is aggregated as known zero cost.",
+      "limitations": ["Not billing-grade reconciliation."]
+    },
+    {
+      "id": "IL-GATE-003",
+      "hero": true,
+      "statement": "Current head evaluates migration evidence with non-compensatory change gates.",
+      "evidence_maturity": "L1",
+      "scope": "Current head + reference gate.",
+      "falsification_condition": "A required reliability failure is overridden by a favorable cost delta in the gate decision.",
+      "limitations": []
+    }
+  ]
+}

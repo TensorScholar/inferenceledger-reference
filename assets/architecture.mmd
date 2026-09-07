@@ -1,0 +1,8 @@
+%% InferenceLedger migration decision (reference model scope).
+flowchart LR
+    Streams[Attempt streams<br/>baseline vs candidate] --> Agg[Attempt-aware aggregates<br/>known cost + unknown counts]
+    Agg --> Gate{Non-compensatory gate}
+    Gate -- reliability miss --> NoGo1[NO-GO]
+    Gate -- latency breach --> NoGo2[NO-GO]
+    Gate -- unknown billing --> Review[REVIEW<br/>price the unknown first]
+    Gate -- cheaper, reliable,<br/>in budget, known --> Ship[SHIP]

@@ -1,0 +1,143 @@
+{
+  "project": "InferenceLedger",
+  "artifact": "reference-cost-model",
+  "evidence_maturity": "L2",
+  "note": "Educational model. Historical 5-request smoke remains a separate L2 frozen artifact and is not re-interpreted here.",
+  "results": [
+    {
+      "scenario": "multi_provider_cheaper_ok",
+      "configuration": "attempt-aware cost model, non-compensatory gate, deterministic synthetic attempts",
+      "expected_behavior": "gate verdict = SHIP",
+      "observed_behavior": {
+        "baseline_cost": 0.12,
+        "candidate_cost": 0.036,
+        "decision": "SHIP"
+      },
+      "pass": true,
+      "evidence_level": "L2",
+      "limitations": [
+        "Educational model with synthetic attempt streams, not production traffic.",
+        "Historical 5-request smoke remains a separate L2 frozen artifact and is not re-interpreted here.",
+        "Latency figures are example p95 inputs, not measured production percentiles.",
+        "No billing-grade cost claim; unknown billing is preserved, never priced."
+      ]
+    },
+    {
+      "scenario": "retry_economics_unknown",
+      "configuration": "attempt-aware cost model, non-compensatory gate, deterministic synthetic attempts",
+      "expected_behavior": "gate verdict = NO-GO",
+      "observed_behavior": {
+        "candidate_retries": 2,
+        "candidate_unknown": 1,
+        "known_cost_not_zeroed": true,
+        "decision": "NO-GO"
+      },
+      "pass": true,
+      "evidence_level": "L2",
+      "limitations": [
+        "Educational model with synthetic attempt streams, not production traffic.",
+        "Historical 5-request smoke remains a separate L2 frozen artifact and is not re-interpreted here.",
+        "Latency figures are example p95 inputs, not measured production percentiles.",
+        "No billing-grade cost claim; unknown billing is preserved, never priced."
+      ]
+    },
+    {
+      "scenario": "latency_regression_blocks_cost_win",
+      "configuration": "attempt-aware cost model, non-compensatory gate, deterministic synthetic attempts",
+      "expected_behavior": "gate verdict = NO-GO",
+      "observed_behavior": {
+        "decision": "NO-GO"
+      },
+      "pass": true,
+      "evidence_level": "L2",
+      "limitations": [
+        "Educational model with synthetic attempt streams, not production traffic.",
+        "Historical 5-request smoke remains a separate L2 frozen artifact and is not re-interpreted here.",
+        "Latency figures are example p95 inputs, not measured production percentiles.",
+        "No billing-grade cost claim; unknown billing is preserved, never priced."
+      ]
+    },
+    {
+      "scenario": "latency_cost_tradeoff_within_margin",
+      "configuration": "attempt-aware cost model, non-compensatory gate, deterministic synthetic attempts",
+      "expected_behavior": "gate verdict = SHIP",
+      "observed_behavior": {
+        "decision": "SHIP"
+      },
+      "pass": true,
+      "evidence_level": "L2",
+      "limitations": [
+        "Educational model with synthetic attempt streams, not production traffic.",
+        "Historical 5-request smoke remains a separate L2 frozen artifact and is not re-interpreted here.",
+        "Latency figures are example p95 inputs, not measured production percentiles.",
+        "No billing-grade cost claim; unknown billing is preserved, never priced."
+      ]
+    },
+    {
+      "scenario": "reliability_gating_unknown_forces_review",
+      "configuration": "attempt-aware cost model, non-compensatory gate, deterministic synthetic attempts",
+      "expected_behavior": "gate verdict = REVIEW",
+      "observed_behavior": {
+        "baseline_success": 1.0,
+        "candidate_success": 1.0,
+        "candidate_unknown": 1,
+        "decision": "REVIEW"
+      },
+      "pass": true,
+      "evidence_level": "L2",
+      "limitations": [
+        "Educational model with synthetic attempt streams, not production traffic.",
+        "Historical 5-request smoke remains a separate L2 frozen artifact and is not re-interpreted here.",
+        "Latency figures are example p95 inputs, not measured production percentiles.",
+        "No billing-grade cost claim; unknown billing is preserved, never priced."
+      ]
+    },
+    {
+      "scenario": "unknown_cost_preserved",
+      "configuration": "attempt-aware cost model, non-compensatory gate, deterministic synthetic attempts",
+      "expected_behavior": "pass = True",
+      "observed_behavior": {
+        "known_cost_usd": 0.01,
+        "unknown_attempts": 1,
+        "pass": true
+      },
+      "pass": true,
+      "evidence_level": "L2",
+      "limitations": [
+        "Educational model with synthetic attempt streams, not production traffic.",
+        "Historical 5-request smoke remains a separate L2 frozen artifact and is not re-interpreted here.",
+        "Latency figures are example p95 inputs, not measured production percentiles.",
+        "No billing-grade cost claim; unknown billing is preserved, never priced."
+      ]
+    },
+    {
+      "scenario": "gate_boundary_matrix",
+      "configuration": "attempt-aware cost model, non-compensatory gate, deterministic synthetic attempts",
+      "expected_behavior": "pass = True",
+      "observed_behavior": {
+        "cases": {
+          "reliability_miss_no_go": "NO-GO",
+          "latency_breach_no_go": "NO-GO",
+          "unknown_review": "REVIEW",
+          "clean_win_ship": "SHIP"
+        },
+        "expect_cases": {
+          "reliability_miss_no_go": "NO-GO",
+          "latency_breach_no_go": "NO-GO",
+          "unknown_review": "REVIEW",
+          "clean_win_ship": "SHIP"
+        },
+        "pass": true
+      },
+      "pass": true,
+      "evidence_level": "L2",
+      "limitations": [
+        "Educational model with synthetic attempt streams, not production traffic.",
+        "Historical 5-request smoke remains a separate L2 frozen artifact and is not re-interpreted here.",
+        "Latency figures are example p95 inputs, not measured production percentiles.",
+        "No billing-grade cost claim; unknown billing is preserved, never priced."
+      ]
+    }
+  ],
+  "all_pass": true
+}
