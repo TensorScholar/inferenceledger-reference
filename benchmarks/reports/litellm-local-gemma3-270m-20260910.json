@@ -1,0 +1,99 @@
+{
+  "evidence_class": "FACT: real local LiteLLM execution-stack telemetry; not provider-invoice evidence",
+  "source": {
+    "mechanism": "LiteLLM CustomLogger callback standard_logging_object from a real synchronous completion",
+    "litellm_version": "1.100.1",
+    "ollama_version": "0.34.0",
+    "ollama_endpoint": "http://127.0.0.1:11434",
+    "ollama_model": "gemma3:270m",
+    "ollama_model_digest": "e7d36fb2c3b3293cfe56d55889867a064b3a2b22e98335f2e6e8a387e081d6be",
+    "ollama_format": "GGUF",
+    "ollama_parameters": "268.10M",
+    "ollama_quantization": "Q8_0",
+    "ollama_runtime": "Apple M2 / Metal",
+    "litellm_model_argument": "ollama/gemma3:270m",
+    "captured_at_utc": "2026-09-10T22:46:33.314808+00:00",
+    "raw_payload_path": "/private/tmp/inferenceledger-litellm-pilot/raw/standard_logging_payload.json",
+    "raw_payload_sha256": "b59f39ede3ffd9e93305d4643bc04ae53dd6d7bc555157c01e7283a46df38506",
+    "sanitized_payload": "benchmarks/reports/litellm-local-gemma3-270m-20260910-sanitized-source.json"
+  },
+  "trace": {
+    "source_record_count": 1,
+    "attempt_count": 1,
+    "retry_count": 0,
+    "fallback_chain_captured": false,
+    "retry_fallback_external_validation": "INSUFFICIENT EVIDENCE / INCONCLUSIVE",
+    "id": "chatcmpl-e45e1979-01cf-489f-87e3-1da8c47a8c66",
+    "trace_id": "509535a6-c09a-44f2-9a4c-1b6e0bf27437",
+    "litellm_call_id": "7994f489-19f1-4cab-b195-ea8e6ec5e04f",
+    "status": "success",
+    "provider": "ollama",
+    "model": "gemma3:270m",
+    "prompt_tokens": 24,
+    "completion_tokens": 7,
+    "total_tokens": 31,
+    "start_time_epoch": 1789080392.68992,
+    "end_time_epoch": 1789080393.19349,
+    "response_time_seconds": 0.5035700798034668,
+    "response_cost": 0.0,
+    "response_cost_failure_debug_info_present": false,
+    "cache_hit": null,
+    "error_information_present": true,
+    "error_semantics": "FACT: the payload contains an empty error_information object; status is success and no error fields are populated"
+  },
+  "import": {
+    "result": "success",
+    "request_id": "509535a6-c09a-44f2-9a4c-1b6e0bf27437",
+    "provider": "ollama",
+    "model": "gemma3:270m",
+    "latency_ms": 504,
+    "estimated_cost_usd": 0.0,
+    "cost_evidence_complete": true,
+    "pricing_table_version": "external_reported:litellm_standard_logging_payload",
+    "cost_evidence": "REPORTED_BY_EXECUTION_STACK",
+    "cost_source": "litellm_standard_logging_payload",
+    "cost_source_record_id": "chatcmpl-e45e1979-01cf-489f-87e3-1da8c47a8c66",
+    "cache_hit": null
+  },
+  "round_trip": {
+    "jsonl_path": "/private/tmp/inferenceledger-litellm-pilot/derived-final/request-ledger.jsonl",
+    "jsonl_equal_to_import": true,
+    "sqlite_path": "/private/tmp/inferenceledger-litellm-pilot/derived-final/ledger.sqlite3",
+    "sqlite_trace_equal_to_import": true,
+    "sqlite_provider_usage_equal_to_import": true,
+    "sqlite_trace_cache_hit": null,
+    "sqlite_usage_cache_hit": null,
+    "sqlite_report_cost_usd": 0.0,
+    "sqlite_report_cost_evidence_complete": true
+  },
+  "reconciliation": {
+    "status": "missing_route",
+    "route_comparison_available": false,
+    "observed_execution_cost_usd": 0.0,
+    "cost_delta_usd": null,
+    "discrepancies": [
+      "INFERENCE: ollama/gemma3:270m is the LiteLLM model argument; StandardLoggingPayload normalizes provider=ollama and model=gemma3:270m.",
+      "FACT: no InferenceLedger route trace was executed, so route-versus-execution reconciliation is not comparable."
+    ]
+  },
+  "sanitization": {
+    "raw_source_kept_outside_version_control": true,
+    "redacted_fields": ["messages[].content", "response.choices[].message.content"],
+    "evidence_fields_preserved": true,
+    "credential_or_pii_scan": "no credential or PII values found in the committed sanitized artifact"
+  },
+  "claims_supported": [
+    "FACT: a real LiteLLM 1.100.1 call executed against the verified local Ollama endpoint and produced a native StandardLoggingPayload.",
+    "FACT: the captured single-attempt success was reconstructed into canonical InferenceLedger evidence.",
+    "FACT: JSONL and SQLite persistence round-tripped the imported trace without discrepancy, including cache_hit=null.",
+    "INFERENCE: the local execution-stack integration path is compatible for this observed non-streaming success shape."
+  ],
+  "claims_not_supported": [
+    "Provider invoice equivalence",
+    "Cloud-provider billing validation",
+    "LiteLLM callback completeness in production",
+    "Cloud-provider reliability or quality",
+    "Commercial readiness",
+    "General statistical validity"
+  ]
+}

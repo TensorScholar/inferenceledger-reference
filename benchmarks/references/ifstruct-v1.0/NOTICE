@@ -1,0 +1,19 @@
+IFStruct v1.0
+Copyright Liquid AI
+
+Licensed under the Apache License, Version 2.0.
+A copy of the license is in LICENSE in this directory.
+
+Upstream:
+  https://github.com/Liquid4All/ifstruct
+  commit 1948dda22fb08bb1fe15eeb5332119d6087889ac
+  dataset https://huggingface.co/datasets/LiquidAI/ifstruct-v1.0
+
+This directory redistributes a deterministically selected subset of
+`data/test.jsonl` (JSON + wrapper-object prefix) together with acquisition
+provenance. Item prompts and schemas are not rewritten.
+
+The JSON-path scoring adapter at
+`src/inference_engine/benchmarking/ifstruct_validator.py` is adapted from
+`ifstruct/validator.py` at the same revision. The YAML extraction path is
+omitted because this experiment does not score YAML items.

@@ -1,0 +1,39 @@
+{
+  "artifact_generated_at_utc": "2026-09-11T00:08:08.732495+00:00",
+  "endpoint": "http://127.0.0.1:11434",
+  "execution_interval": {
+    "baseline_payload_count": 32,
+    "candidate_payload_count": 32,
+    "earliest_start_utc": "2026-09-11T00:06:44.229721+00:00",
+    "end_field": "endTime",
+    "latest_end_utc": "2026-09-11T00:07:38.755322+00:00",
+    "payload_count": 64,
+    "source": "litellm_standard_logging_payload",
+    "start_field": "startTime"
+  },
+  "host_arch": "arm64",
+  "litellm_version": "1.100.1",
+  "model_argument": "ollama/gemma3:270m",
+  "model_digest_prefix": "e7d36fb2c3b3293c",
+  "ollama_version": "0.34.0",
+  "pre_registration": {
+    "declared_locked_at_utc": "2026-09-11T00:00:00+00:00",
+    "declared_status": "PRE_REGISTERED_BEFORE_EXECUTION",
+    "evidence_class": "INSUFFICIENT_EVIDENCE",
+    "git_proven_before_execution": false,
+    "reason": "The specification declared PRE_REGISTERED_BEFORE_EXECUTION, but the specification and result artifacts first entered Git history together in commit 67825bb5e533fe9e301fc7a29b1ae741affbbc75 at 2026-09-11T00:12:06Z, after source telemetry latest endTime 2026-09-11T00:07:38.755322Z. Git cannot independently prove the policy was immutable before execution.",
+    "source_commit_sha": null,
+    "spec_commit_sha": null,
+    "spec_committed_and_clean": false,
+    "spec_sha256": "feb7f9ab2c6e11feaca2aa65a19eeccef50dc7f5f65318c7ee2666402d8196c0",
+    "workload_sha256": "04157fc5e5c084c25c7705c6f729b5697f3667ed2086d2291fdcb3762a039933"
+  },
+  "runtime_note": "Apple M2 / Metal local Ollama. LiteLLM installed only in an isolated environment outside the repository.",
+  "withdrawn_runtime_fields": {
+    "captured_at_utc": {
+      "reason": "captured_at_utc is later than generated_at_utc and cannot be a capture timestamp for this decision artifact",
+      "status": "invalid",
+      "value": "2026-09-11T00:30:00+00:00"
+    }
+  }
+}

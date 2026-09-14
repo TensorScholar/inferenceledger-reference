@@ -1,0 +1,30 @@
+{
+  "artifacts": [
+    {
+      "original_sha256": "f5485b4859ee3666871e6364a2423344ce640e31ae0c4dc15db8f1f335d9af2d",
+      "path": "benchmarks/reports/ifstruct-json-mode-20260911/ifstruct-json-mode-20260911-candidate.provenance.json",
+      "published_sha256": "bea4dca0c65dfadc1a04c6cb669b96926ace965e26a8ec2294dc41a1b0715309",
+      "transformation": "replace one machine-local absolute spec_path with the repository-relative spec_path; no metric, threshold, outcome, timing, usage, cost, or experiment identity fields changed"
+    },
+    {
+      "original_sha256": "31b38cb4360b0ac896d5e2935870ab85e7ff05894405bdcf592a8f283d7752e6",
+      "path": "benchmarks/reports/ifstruct-json-mode-20260911/decision.json",
+      "published_sha256": "8e8b41c545a47a2864af24fa621a2ab690924d84a8823b719a75985703b27e34",
+      "transformation": "replace one machine-local absolute spec_path with the repository-relative spec_path; no metric, threshold, outcome, timing, usage, cost, or experiment identity fields changed"
+    },
+    {
+      "original_sha256": "2f3e2077b0f105e7a2ff11882af71d273b0528b6aa7a42c41c417db34b358ad4",
+      "path": "benchmarks/reports/ifstruct-json-mode-20260911/ifstruct-json-mode-20260911-baseline.provenance.json",
+      "published_sha256": "f53e274ec1a97e3f39814ace5eddabe5dd4929247ab8519b651d8d4d4b1d330f",
+      "transformation": "replace one machine-local absolute spec_path with the repository-relative spec_path; no metric, threshold, outcome, timing, usage, cost, or experiment identity fields changed"
+    },
+    {
+      "original_sha256": "d724f2e232143db97322c21539406f26ff48ae1bfdd088edbf871d98e2857e0f",
+      "path": "benchmarks/reports/openrouter-billing-reconciliation-6b-20260911T220449Z/runtime.json",
+      "published_sha256": "cb30fe72c33c66d27c89ddca7c7e6b7473fdbd0b17822b04f50522d76967b955",
+      "transformation": "replace one machine-local absolute spec_path with the repository-relative spec_path; no metric, threshold, outcome, timing, usage, cost, or experiment identity fields changed"
+    }
+  ],
+  "reason": "Public-release hygiene: remove machine-local absolute paths while preserving exact original bytes in the non-public .review package.",
+  "version": "publication-redactions-v1"
+}

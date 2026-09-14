@@ -1,0 +1,11 @@
+{
+  "endpoint": "http://127.0.0.1:11434",
+  "host_arch": "arm64",
+  "litellm_version": "1.100.1",
+  "model_argument": "ollama/gemma3:270m",
+  "model_digest": "e7d36fb2c3b3293cfe56d55889867a064b3a2b22e98335f2e6e8a387e081d6be",
+  "model_digest_prefix": "e7d36fb2c3b3293c",
+  "ollama_version": "0.34.0",
+  "python_version": "3.12.10",
+  "runtime_note": "Apple M2 / Metal local Ollama. LiteLLM installed only in an isolated environment outside the repository. Cost is REPORTED_BY_EXECUTION_STACK."
+}

@@ -1,0 +1,50 @@
+{
+  "post": {
+    "acquired_at_utc": "2026-09-11T22:36:02.926421+00:00",
+    "raw_sha256": "39448c1eadfe797230c21afd9e09345a23c7b9ae6381e5fd652a30d1a46e3bae",
+    "sanitized": {
+      "data": {
+        "byok_usage": 0,
+        "byok_usage_daily": 0,
+        "byok_usage_monthly": 0,
+        "byok_usage_weekly": 0,
+        "expires_at": null,
+        "include_byok_in_limit": false,
+        "is_free_tier": false,
+        "is_management_key": false,
+        "is_provisioning_key": false,
+        "limit": "0.05",
+        "limit_remaining": "0.04929155",
+        "limit_reset": null,
+        "usage": "0.00070845",
+        "usage_daily": "0.00070845",
+        "usage_monthly": "0.00070845",
+        "usage_weekly": "0.00070845"
+      }
+    }
+  },
+  "pre": {
+    "acquired_at_utc": "2026-09-11T22:26:13.558540+00:00",
+    "raw_sha256": "1d7b71371ecd366de87195b688f618e29ab4b7b1158d6fa8478b3fbaa0638946",
+    "sanitized": {
+      "data": {
+        "byok_usage": 0,
+        "byok_usage_daily": 0,
+        "byok_usage_monthly": 0,
+        "byok_usage_weekly": 0,
+        "expires_at": null,
+        "include_byok_in_limit": false,
+        "is_free_tier": false,
+        "is_management_key": false,
+        "is_provisioning_key": false,
+        "limit": "0.05",
+        "limit_remaining": "0.05",
+        "limit_reset": null,
+        "usage": 0,
+        "usage_daily": 0,
+        "usage_monthly": 0,
+        "usage_weekly": 0
+      }
+    }
+  }
+}

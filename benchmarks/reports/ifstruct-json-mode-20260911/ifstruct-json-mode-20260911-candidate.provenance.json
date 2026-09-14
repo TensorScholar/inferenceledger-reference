@@ -1,0 +1,37 @@
+{
+  "execution_interval": {
+    "earliest_start_utc": "2026-09-11T01:49:48.087249+00:00",
+    "end_field": "endTime",
+    "latest_end_utc": "2026-09-11T02:07:45.932555+00:00",
+    "payload_count": 100,
+    "source": "litellm_standard_logging_payload",
+    "start_field": "startTime"
+  },
+  "git": {
+    "source_commit_committed_at_utc": "2026-09-11T01:21:41+00:00",
+    "source_commit_sha": "d14a2e19443c72f58f9d21dcbf7e2694d85f12dd",
+    "spec_commit_committed_at_utc": "2026-09-11T01:21:41+00:00",
+    "spec_commit_sha": "d14a2e19443c72f58f9d21dcbf7e2694d85f12dd",
+    "spec_committed_and_clean": true,
+    "spec_path": "benchmarks/experiments/ifstruct-json-mode-20260911/experiment.json",
+    "spec_relative_path": "benchmarks/experiments/ifstruct-json-mode-20260911/experiment.json",
+    "spec_sha256": "f837e378b3ca5861785f1eccc58dccdd5fd2175a9845c433d43a86fbe330e749"
+  },
+  "pre_registration": {
+    "declared_locked_at_utc": null,
+    "declared_status": "PRE_REGISTERED_BEFORE_EXECUTION",
+    "evidence_class": "GIT_PROVEN",
+    "git_proven_before_execution": true,
+    "reason": "experiment specification was committed and unmodified in Git, and the source commit timestamp precedes captured execution telemetry",
+    "source_commit_sha": "d14a2e19443c72f58f9d21dcbf7e2694d85f12dd",
+    "spec_commit_sha": "d14a2e19443c72f58f9d21dcbf7e2694d85f12dd",
+    "spec_committed_and_clean": true,
+    "spec_sha256": "f837e378b3ca5861785f1eccc58dccdd5fd2175a9845c433d43a86fbe330e749",
+    "workload_sha256": "35648eb88ea2b07008113e913b406186f5c9399cff3cf88bf853600fed2f7192"
+  },
+  "timeline": {
+    "reasons": [],
+    "status": "valid"
+  },
+  "workload_sha256": "35648eb88ea2b07008113e913b406186f5c9399cff3cf88bf853600fed2f7192"
+}

@@ -1,0 +1,45 @@
+{
+  "completed_request_count": 50,
+  "planned_request_count": 50,
+  "protocol_violation": false,
+  "provenance": {
+    "execution_interval": {
+      "earliest_start_utc": "2026-09-11T22:26:13.558943+00:00",
+      "end_field": "ended_at_utc",
+      "latest_end_utc": "2026-09-11T22:35:46.941748+00:00",
+      "payload_count": 50,
+      "source": "openrouter_chat_completions_wall_clock",
+      "start_field": "started_at_utc"
+    },
+    "git": {
+      "source_commit_committed_at_utc": "2026-09-11T22:19:57+00:00",
+      "source_commit_sha": "6a8522a8921bfd3b1d86ba6fa953e508a8660139",
+      "spec_commit_committed_at_utc": "2026-09-11T22:19:57+00:00",
+      "spec_commit_sha": "6a8522a8921bfd3b1d86ba6fa953e508a8660139",
+      "spec_committed_and_clean": true,
+      "spec_path": "benchmarks/experiments/openrouter-billing-reconciliation-6b-20260911T220449Z/experiment.json",
+      "spec_relative_path": "benchmarks/experiments/openrouter-billing-reconciliation-6b-20260911T220449Z/experiment.json",
+      "spec_sha256": "50248d33884b0e77fc5ff0eab2e05b9fa30deaa871f4aad16ff0bc4db1f56f39"
+    },
+    "pre_registration": {
+      "declared_locked_at_utc": "2026-09-11T22:04:49+00:00",
+      "declared_status": "PRE_REGISTERED_BEFORE_EXECUTION",
+      "evidence_class": "GIT_PROVEN",
+      "git_proven_before_execution": true,
+      "reason": "experiment specification was committed and unmodified in Git, and the source commit timestamp precedes captured execution telemetry",
+      "source_commit_sha": "6a8522a8921bfd3b1d86ba6fa953e508a8660139",
+      "spec_commit_sha": "6a8522a8921bfd3b1d86ba6fa953e508a8660139",
+      "spec_committed_and_clean": true,
+      "spec_sha256": "50248d33884b0e77fc5ff0eab2e05b9fa30deaa871f4aad16ff0bc4db1f56f39",
+      "workload_sha256": "2b986ccfd0f23cb0c8d6ea2f87a38358d55760ffe79a81b5fa541c08ab90f24f"
+    },
+    "timeline": {
+      "reasons": [],
+      "status": "valid"
+    },
+    "workload_sha256": "2b986ccfd0f23cb0c8d6ea2f87a38358d55760ffe79a81b5fa541c08ab90f24f"
+  },
+  "source_commit_sha": "6a8522a8921bfd3b1d86ba6fa953e508a8660139",
+  "spec_commit_sha": "6a8522a8921bfd3b1d86ba6fa953e508a8660139",
+  "stop_reason": null
+}
