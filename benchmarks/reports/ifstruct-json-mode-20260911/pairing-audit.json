@@ -1,0 +1,14 @@
+{
+  "ambiguous": false,
+  "baseline_count": 100,
+  "candidate_count": 100,
+  "coverage": 1.0,
+  "duplicate_baseline_item_ids": [],
+  "duplicate_baseline_request_ids": [],
+  "duplicate_candidate_item_ids": [],
+  "duplicate_candidate_request_ids": [],
+  "fail_closed_reason": null,
+  "matched_pair_count": 100,
+  "unmatched_baseline_item_ids": [],
+  "unmatched_candidate_item_ids": []
+}

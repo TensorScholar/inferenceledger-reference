@@ -1,16 +1,14 @@
-.PHONY: verify tests experiments evidence examples
+PYTHON ?= .venv/bin/python
 
-verify: tests experiments evidence
+.PHONY: test lint typecheck check
 
-tests:
-	cd reference && python3 -m pytest tests/ -q
-	python3 -m pytest tests/ -q
+test:
+	$(PYTHON) -m pytest
 
-experiments:
-	python3 experiments/run_experiment.py
+lint:
+	$(PYTHON) -m ruff check src tests
 
-evidence:
-	python3 scripts/verify_evidence.py
+typecheck:
+	$(PYTHON) -m mypy src
 
-examples:
-	python3 examples/quickstart.py
+check: lint typecheck test

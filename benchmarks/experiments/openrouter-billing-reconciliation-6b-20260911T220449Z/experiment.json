@@ -1,0 +1,96 @@
+{
+  "classification": "GATEWAY_BILLING_VALIDATION",
+  "experiment_id": "openrouter-billing-reconciliation-6b-20260911T220449Z",
+  "locked_at_utc": "2026-09-11T22:04:49+00:00",
+  "not": [
+    "OPENAI_PROVIDER_BILLING_VALIDATION",
+    "FINAL_INVOICE_VALIDATION",
+    "CUSTOMER_VALIDATION",
+    "CHANGE_GATE_MIGRATION"
+  ],
+  "poll_policy": {
+    "generation_metadata_poll": {
+      "backoff_multiplier": 2.0,
+      "initial_delay_seconds": 1.0,
+      "max_attempts": 10,
+      "max_delay_seconds": 8.0
+    },
+    "key_usage_settlement_poll": {
+      "delay_seconds": 5.0,
+      "max_attempts": 12,
+      "stable_reads": 2
+    }
+  },
+  "pricing": {
+    "path": "benchmarks/experiments/openrouter-billing-reconciliation-6b-20260911T220449Z/pricing-source.json",
+    "pricing_observed_at": "2026-09-11T22:02:53.267052+00:00",
+    "pricing_table_version": "openrouter-gpt-4o-mini-2024-07-18-2026-09-11",
+    "source_url": "https://openrouter.ai/api/v1/models/openai/gpt-4o-mini-2024-07-18/endpoints"
+  },
+  "product_question": "For one isolated OpenRouter micro-experiment, do response usage, reconstructed OpenRouter tariff cost, generation total_cost, and dedicated-key usage delta agree under a frozen policy?",
+  "protocol_path": "docs/11_OPENROUTER_GATEWAY_BILLING_VALIDATION.md",
+  "reconciliation_policy": {
+    "R1": "exact integer equality of comparable billed token fields; native fields not forced",
+    "R2": "exact Decimal equality of reconstructed OpenRouter tariff cost vs response usage.cost",
+    "R3": "exact Decimal equality of response usage.cost vs generation total_cost",
+    "R4": "exact Decimal equality of sum(C) vs dedicated-key usage delta E after settlement",
+    "R5": "exact Decimal equality of sum(D) vs E after settlement",
+    "R6": "informational OpenRouter-reported upstream cost; not independent OpenAI billing",
+    "epsilon": null,
+    "missing_optional_field": "null_not_zero"
+  },
+  "runtime": {
+    "allow_fallbacks": false,
+    "application_retries": 0,
+    "byok": false,
+    "continue_after_inference_failure": false,
+    "execution_gateway": "openrouter",
+    "max_tokens": 8,
+    "provider_only": [
+      "openai"
+    ],
+    "provider_order": [
+      "openai"
+    ],
+    "requested_model": "openai/gpt-4o-mini-2024-07-18",
+    "response_cache_opt_in": false,
+    "sdk_retries": 0,
+    "service_tier": null,
+    "stream": false,
+    "temperature": 0,
+    "tools": false
+  },
+  "spend_policy": {
+    "conservative_full_run_usd": "0.02274000",
+    "conservative_per_request_usd": "0.00045480",
+    "fresh_key_usage_must_be_zero": true,
+    "max_output_tokens": 8,
+    "planned_request_count": 50,
+    "prompt_byte_bound": 3000,
+    "provider_side_maximum_usd": "0.05",
+    "software_guard_usd": "0.025",
+    "user_authorized_maximum_usd": "0.20"
+  },
+  "status": "PRE_REGISTERED_BEFORE_EXECUTION",
+  "supported_claims": [
+    "Isolated OpenRouter gateway request/generation/key accounting can be compared for this micro-experiment."
+  ],
+  "unsupported_claims": [
+    "direct OpenAI billing validated",
+    "OpenAI Costs API validated",
+    "final invoice validated",
+    "OpenRouter upstream cost independently verified against OpenAI",
+    "production economics validated",
+    "Change Gate SHIP"
+  ],
+  "workload": {
+    "classification": "GATEWAY_BILLING_VALIDATION",
+    "identity": "openrouter-billing-economics-n50",
+    "item_count": 50,
+    "not_a_customer_workload": true,
+    "not_a_quality_eval": true,
+    "path": "benchmarks/workloads/openrouter-billing-economics-n50.jsonl",
+    "prompt_byte_bound": 3000,
+    "sha256": "2b986ccfd0f23cb0c8d6ea2f87a38358d55760ffe79a81b5fa541c08ab90f24f"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "budget_violation_count": 0,
+  "completion_tokens": 63,
+  "error_rate": 0.0,
+  "estimated_cost_usd": 0.0011145,
+  "failure_count": 0,
+  "latency_p50_ms": 2579,
+  "latency_p95_ms": 8681,
+  "ledger_path": "reports/benchmarks/latest-policy-json-contract-freemodel.jsonl",
+  "limitations": [
+    "Cost is calculated from provider usage metadata and the repository pricing table.",
+    "Quality scoring is deterministic and limited to workload-declared validators.",
+    "Do not claim savings unless comparison quality remains acceptable."
+  ],
+  "model": "gpt-5.4-mini,gpt-5.4,gpt-5.5",
+  "model_distribution": {
+    "gpt-5.4-mini": 5
+  },
+  "observed_latency_ms_by_model": {
+    "gpt-5.4-mini": {
+      "count": 5,
+      "p50": 2579,
+      "p95": 8681
+    }
+  },
+  "prompt_tokens": 4564,
+  "provider": "openai",
+  "provider_attempt_count": 5,
+  "provider_retry_count": 0,
+  "quality_count": 5,
+  "quality_pass_count": 5,
+  "quality_pass_rate": 1.0,
+  "quality_score_avg": 1.0,
+  "request_count": 5,
+  "route_count": 5,
+  "route_reason_distribution": {
+    "policy.cost_within_budget": 5
+  },
+  "strategy": "policy",
+  "success_count": 5,
+  "total_tokens": 4627,
+  "workload_path": "benchmarks/workloads/smoke.jsonl",
+  "workload_sha256": "c87a143808dc950f7cc229b0806c4ecfd9ee70b5ce0c568a0f5c73dc60c3b520"
+}

@@ -1,0 +1,45 @@
+{
+  "budget_violation_count": 0,
+  "completion_tokens": 50906,
+  "cost_evidence_complete": true,
+  "error_rate": 0.0,
+  "estimated_cost_usd": 0.0,
+  "failure_count": 0,
+  "latency_p50_ms": 9912,
+  "latency_p95_ms": 25626,
+  "ledger_path": "benchmarks/reports/ifstruct-json-mode-20260911/ifstruct-json-mode-20260911-candidate.jsonl",
+  "limitations": [
+    "Known cost is reported by the execution stack; it is not InferenceLedger pricing-table reconstruction and not provider invoice proof.",
+    "Quality scoring is deterministic and limited to workload-declared validators.",
+    "Do not claim savings unless comparison quality remains acceptable.",
+    "No InferenceLedger route decision was executed; reconciliation is expected to be MISSING_ROUTE.",
+    "Quality scoring is deterministic: IFStruct JSON-path structure checks (parse, code-block, commentary, wrapper, item count, JSON Schema). Binary pass only if all stages have zero errors. Not semantic quality."
+  ],
+  "model": "gemma3:270m",
+  "model_distribution": {
+    "gemma3:270m": 100
+  },
+  "observed_latency_ms_by_model": {
+    "gemma3:270m": {
+      "count": 100,
+      "p50": 9912,
+      "p95": 25626
+    }
+  },
+  "prompt_tokens": 65665,
+  "provider": "ollama",
+  "provider_attempt_count": 100,
+  "provider_retry_count": 0,
+  "quality_count": 100,
+  "quality_pass_count": 0,
+  "quality_pass_rate": 0.0,
+  "quality_score_avg": 0.0,
+  "request_count": 100,
+  "route_count": 0,
+  "route_reason_distribution": {},
+  "strategy": "litellm_candidate",
+  "success_count": 100,
+  "total_tokens": 116571,
+  "workload_path": "benchmarks/workloads/ifstruct-v1.0-json-wrapper-n100.jsonl",
+  "workload_sha256": "35648eb88ea2b07008113e913b406186f5c9399cff3cf88bf853600fed2f7192"
+}

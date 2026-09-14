@@ -1,0 +1,45 @@
+{
+  "budget_violation_count": 0,
+  "completion_tokens": 682,
+  "cost_evidence_complete": true,
+  "error_rate": 0.0,
+  "estimated_cost_usd": 0.0,
+  "failure_count": 0,
+  "latency_p50_ms": 449,
+  "latency_p95_ms": 1249,
+  "ledger_path": "benchmarks/reports/local-json-mode-20260911/local-json-mode-20260911-candidate.jsonl",
+  "limitations": [
+    "Known cost is reported by the execution stack; it is not InferenceLedger pricing-table reconstruction and not provider invoice proof.",
+    "Quality scoring is deterministic and limited to workload-declared validators.",
+    "Do not claim savings unless comparison quality remains acceptable.",
+    "No InferenceLedger route decision was executed; reconciliation is expected to be MISSING_ROUTE.",
+    "Quality scoring is deterministic json_field_equals, not semantic quality."
+  ],
+  "model": "gemma3:270m",
+  "model_distribution": {
+    "gemma3:270m": 32
+  },
+  "observed_latency_ms_by_model": {
+    "gemma3:270m": {
+      "count": 32,
+      "p50": 449,
+      "p95": 1249
+    }
+  },
+  "prompt_tokens": 1408,
+  "provider": "ollama",
+  "provider_attempt_count": 32,
+  "provider_retry_count": 0,
+  "quality_count": 32,
+  "quality_pass_count": 8,
+  "quality_pass_rate": 0.25,
+  "quality_score_avg": 0.421875,
+  "request_count": 32,
+  "route_count": 0,
+  "route_reason_distribution": {},
+  "strategy": "litellm_candidate",
+  "success_count": 32,
+  "total_tokens": 2090,
+  "workload_path": "benchmarks/workloads/json-contract-synthetic-v1.jsonl",
+  "workload_sha256": "04157fc5e5c084c25c7705c6f729b5697f3667ed2086d2291fdcb3762a039933"
+}

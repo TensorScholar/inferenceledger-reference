@@ -1,0 +1,24 @@
+{
+  "baseline_cost_usd": 0.00371,
+  "baseline_error_rate": 0.0,
+  "baseline_latency_p95_ms": 11588,
+  "baseline_quality_pass_rate": 1.0,
+  "baseline_run_id": "baseline-json-contract-gpt-5-4-20260703",
+  "baseline_strategy": "single_model",
+  "candidate_cost_usd": 0.0011145,
+  "candidate_error_rate": 0.0,
+  "candidate_latency_p95_ms": 8681,
+  "candidate_quality_pass_rate": 1.0,
+  "candidate_run_id": "policy-json-contract-freemodel-20260703",
+  "candidate_strategy": "policy",
+  "comparable": true,
+  "cost_delta_percent": -69.95956873315365,
+  "cost_delta_usd": -0.0025955,
+  "latency_p95_delta_ms": -2907,
+  "limitations": [
+    "Comparison uses stored run summaries from the local SQLite ledger.",
+    "Comparison requires candidate quality pass rate to meet or exceed baseline before savings are defensible."
+  ],
+  "quality_pass_rate_delta": 0.0,
+  "workload_path": "benchmarks/workloads/smoke.jsonl"
+}

@@ -1,0 +1,116 @@
+{
+  "experiment_id": "local-json-mode-20260911",
+  "locked_at_utc": "2026-09-11T00:00:00+00:00",
+  "classification": "SYNTHETIC",
+  "status": "PRE_REGISTERED_BEFORE_EXECUTION",
+  "pre_registration_git_proof": {
+    "evidence_class": "INSUFFICIENT_EVIDENCE",
+    "git_proven": false,
+    "declared_status_preserved": "PRE_REGISTERED_BEFORE_EXECUTION",
+    "original_spec_sha256": "feb7f9ab2c6e11feaca2aa65a19eeccef50dc7f5f65318c7ee2666402d8196c0",
+    "first_git_commit_sha": "67825bb5e533fe9e301fc7a29b1ae741affbbc75",
+    "first_git_commit_committed_at_utc": "2026-09-11T00:12:06+00:00",
+    "reason": "The specification declared PRE_REGISTERED_BEFORE_EXECUTION, but the specification and result artifacts first entered Git history together in commit 67825bb5e533fe9e301fc7a29b1ae741affbbc75 at 2026-09-11T00:12:06Z, after source telemetry latest endTime 2026-09-11T00:07:38.755322Z. Git cannot independently prove the policy was immutable before execution. declared locked_at_utc is self-declared."
+  },
+  "product_question": "Should InferenceLedger treat enabling LiteLLM/Ollama JSON mode as an acceptable execution-policy change for this JSON-contract synthetic workload?",
+  "workload": {
+    "path": "benchmarks/workloads/json-contract-synthetic-v1.jsonl",
+    "identity": "json-contract-synthetic-v1",
+    "sha256": "04157fc5e5c084c25c7705c6f729b5697f3667ed2086d2291fdcb3762a039933",
+    "item_count": 32,
+    "classification": "SYNTHETIC",
+    "not_a_production_workload": true,
+    "not_a_customer_workload": true,
+    "not_a_published_reference_benchmark": true
+  },
+  "runtime_intent": {
+    "execution_stack": "LiteLLM",
+    "model_argument": "ollama/gemma3:270m",
+    "endpoint": "http://127.0.0.1:11434",
+    "stream": false,
+    "paid_providers": false
+  },
+  "baseline": {
+    "run_id": "local-json-mode-20260911-baseline",
+    "definition": "LiteLLM non-streaming completion to ollama/gemma3:270m with temperature=0.0, max_tokens=128, and no response_format. JSON shape is requested only in the prompt.",
+    "rationale": "This is the current prompt-only structured-output practice for the JSON-contract workload."
+  },
+  "candidate": {
+    "run_id": "local-json-mode-20260911-candidate",
+    "definition": "Same model, endpoint, temperature, max_tokens, and prompts as baseline, plus LiteLLM response_format={\"type\":\"json_object\"} so the execution stack requests JSON mode.",
+    "rationale": "Enabling execution-stack JSON mode is a real inference-policy change teams actually consider for JSON-contract tasks. The workload is held constant."
+  },
+  "expected_change": {
+    "quality": "Candidate accepted-outcome rate should not worsen. JSON mode may improve json_field_equals pass rate if the model currently emits non-JSON text.",
+    "latency": "Candidate mean successful latency may increase because constrained decoding can be slower. The pre-registered mean-delta margin is 750 ms.",
+    "failure_and_retries": "Candidate should not increase failures, provider attempts, or retries.",
+    "cost": "Local LiteLLM/Ollama reported cost is expected to remain an execution-stack report, likely numeric zero. This is not provider-invoice economics and must not be interpreted as savings."
+  },
+  "quality_evaluator": {
+    "name": "workload-declared json_field_equals",
+    "module": "inference_engine.benchmarking.eval",
+    "measures": "Exact string equality of named JSON object fields after json.loads. Optional case folding. Does not measure semantic correctness, factuality, or open-ended quality.",
+    "does_not_measure": [
+      "semantic quality",
+      "helpfulness",
+      "safety",
+      "style",
+      "LLM-as-judge scores"
+    ]
+  },
+  "pairing": {
+    "key": "workload_item_id",
+    "not_keys": ["request UUID", "execution order"]
+  },
+  "segments": {
+    "observational_tags": ["task", "difficulty", "suite"],
+    "decision_critical": [
+      {
+        "tag_key": "output_contract",
+        "tag_value": "json",
+        "reason": "The migration is specifically about JSON-contract output. All 32 items share this tag, so the critical population equals the overall workload rather than an undersized task slice."
+      }
+    ],
+    "not_decision_critical": {
+      "task": "task=* slices have 4-8 items, below the paired minimum_samples=30 policy. They are reported, not gated, so undersized slices cannot silently force or hide a decision."
+    }
+  },
+  "statistics": {
+    "method": "paired BCa bootstrap mean difference over workload_item_id",
+    "confidence_level": 0.95,
+    "bootstrap_iterations": 10000,
+    "minimum_samples": 30,
+    "seed": 20260911,
+    "tail_latency_inference": false
+  },
+  "change_gate_policy": {
+    "max_mean_cost_delta_usd": 0.0,
+    "max_failure_harm_rate": 0.05,
+    "max_mean_successful_latency_delta_ms": 750.0,
+    "max_accepted_outcome_harm_rate": 0.05,
+    "minimum_cost_pair_coverage": 1.0,
+    "minimum_failure_pair_coverage": 1.0,
+    "minimum_successful_latency_pair_coverage": 1.0,
+    "minimum_accepted_outcome_pair_coverage": 1.0,
+    "confidence_level": 0.95,
+    "minimum_bootstrap_iterations": 10000,
+    "max_mean_provider_attempt_delta": 0.0,
+    "max_mean_provider_retry_delta": 0.0,
+    "minimum_operational_pair_coverage": 1.0,
+    "require_tail_latency_inference": false,
+    "critical_segments": [
+      {
+        "tag_key": "output_contract",
+        "tag_value": "json",
+        "minimum_tail_latency_samples": 30
+      }
+    ]
+  },
+  "unsupported_claims_before_results": [
+    "production proven",
+    "invoice validated",
+    "commercially validated",
+    "customer-workload validated",
+    "p95/p99 inferential latency claims"
+  ]
+}

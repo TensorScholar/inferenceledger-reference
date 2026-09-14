@@ -1,0 +1,12 @@
+{
+  "cache_write_per_token": null,
+  "cached_input_per_token": "0.000000075",
+  "input_per_token": "0.00000015",
+  "model": "openai/gpt-4o-mini-2024-07-18",
+  "output_per_token": "0.0000006",
+  "pricing_observed_at": "2026-09-11T22:02:53.267052+00:00",
+  "pricing_table_version": "openrouter-gpt-4o-mini-2024-07-18-2026-09-11",
+  "provider": "openrouter",
+  "source_url": "https://openrouter.ai/api/v1/models/openai/gpt-4o-mini-2024-07-18/endpoints",
+  "why_experiment_local": "Production DEFAULT_PRICING is openai-standard-2026-09-03 for direct OpenAI identity. This experiment prices an OpenRouter gateway execution."
+}

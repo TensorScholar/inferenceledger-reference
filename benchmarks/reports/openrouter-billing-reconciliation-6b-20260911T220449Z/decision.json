@@ -1,0 +1,63 @@
+{
+  "classification": "VALIDATED_MISMATCH",
+  "direct_openai_billing_validated": false,
+  "execution_gateway": "openrouter",
+  "experiment_classification": "GATEWAY_BILLING_VALIDATION",
+  "experiment_id": "openrouter-billing-reconciliation-6b-20260911T220449Z",
+  "final_invoice_validated": false,
+  "requested_model": "openai/gpt-4o-mini-2024-07-18",
+  "rules": [
+    {
+      "left": null,
+      "reason": "R1 combined across 50 successful item(s)",
+      "required": true,
+      "right": null,
+      "rule_id": "R1",
+      "status": "MISMATCH"
+    },
+    {
+      "left": null,
+      "reason": "R2 combined across 50 successful item(s)",
+      "required": true,
+      "right": null,
+      "rule_id": "R2",
+      "status": "MATCH"
+    },
+    {
+      "left": null,
+      "reason": "R3 combined across 50 successful item(s)",
+      "required": true,
+      "right": null,
+      "rule_id": "R3",
+      "status": "MATCH"
+    },
+    {
+      "left": "0.00070845",
+      "reason": "exact Decimal equality of summed OpenRouter costs and dedicated-key usage delta",
+      "required": true,
+      "right": "0.00070845",
+      "rule_id": "R4",
+      "status": "MATCH"
+    },
+    {
+      "left": "0.00070845",
+      "reason": "exact Decimal equality of summed OpenRouter costs and dedicated-key usage delta",
+      "required": true,
+      "right": "0.00070845",
+      "rule_id": "R5",
+      "status": "MATCH"
+    }
+  ],
+  "supported_claims_if_validated_match": [
+    "Isolated OpenRouter gateway request/generation/key accounting can be compared for this micro-experiment."
+  ],
+  "unsupported_claims": [
+    "direct OpenAI billing validated",
+    "OpenAI Costs API validated",
+    "final invoice validated",
+    "OpenRouter upstream cost independently verified against OpenAI",
+    "production economics validated",
+    "Change Gate SHIP"
+  ],
+  "upstream_cost_interpretation": "FACT: OpenRouter-reported upstream_inference_cost only. NOT independent OpenAI billing. Layer G and final invoice are NOT OBSERVED."
+}

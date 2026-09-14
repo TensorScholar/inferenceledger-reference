@@ -1,0 +1,130 @@
+[
+  {
+    "sha256": "a2dc9b5ba14aabffbbde8fd652e4d7bbde754e9e304b9337b33c0b2d5fefd36e",
+    "workload_item_id": "json-contract-01"
+  },
+  {
+    "sha256": "f1c5a9caddc6b191f2585d14689107c719f11df97bfd0f49cda21dbb40ac1f1b",
+    "workload_item_id": "json-contract-02"
+  },
+  {
+    "sha256": "49f19edc9233ba21e0636e0a279a37c023c4e847f421a391dc7c3d7bf7be0241",
+    "workload_item_id": "json-contract-03"
+  },
+  {
+    "sha256": "b0ae95043fdd06eea8d1c686923b554e29bd63182a95ba27dc2e9b165605a182",
+    "workload_item_id": "json-contract-04"
+  },
+  {
+    "sha256": "494b7979cbabf5c61a7d8280e917f165974c2bda68d91d845be7f461b84565b3",
+    "workload_item_id": "json-contract-05"
+  },
+  {
+    "sha256": "a4c138ba9d5e0f0d4ac222422359d58b2b8a71dd929c9af6cdd4c33b3cb2ee8f",
+    "workload_item_id": "json-contract-06"
+  },
+  {
+    "sha256": "747a54affe3b6caa51c5c814f054c9639f828604dff478b18c6d5f2c2384dc18",
+    "workload_item_id": "json-contract-07"
+  },
+  {
+    "sha256": "62f89367b85286714ad2ecdf1f4f18700c6868ed07a5df765496f05c2c642378",
+    "workload_item_id": "json-contract-08"
+  },
+  {
+    "sha256": "950a0efffc3dcbcc3dc9c33580501f10e08b51a6d6f06a70e0d906bf62476a3e",
+    "workload_item_id": "classification-01"
+  },
+  {
+    "sha256": "68f6bf05d29f6bb98c536fe627d81f92a5229303a48e41ef89803bd691d20df8",
+    "workload_item_id": "classification-02"
+  },
+  {
+    "sha256": "207306953ac07c2487991816f3224cc480debfc76ac176d78f8176965e5eefcd",
+    "workload_item_id": "classification-03"
+  },
+  {
+    "sha256": "7bbdcf9f3aa12d3c54f0552e768728847eda8bcdbb00c4149a2fb78587b4249c",
+    "workload_item_id": "classification-04"
+  },
+  {
+    "sha256": "bc03a8a12b07a23b789e90f632366abb547748377409ad6ca02bc4afdc459c31",
+    "workload_item_id": "classification-05"
+  },
+  {
+    "sha256": "4ffe3ddd3ccb648428cc5beec767852849929a4bc75521e50abef54f9b58f588",
+    "workload_item_id": "classification-06"
+  },
+  {
+    "sha256": "8c83b069ade4390cafe87930e570bd872de922e82b8109589d8b047c4f476bb6",
+    "workload_item_id": "classification-07"
+  },
+  {
+    "sha256": "d92d8d61c284366ae9c1220d2697e1072919f6042922bd12149a87e29d1a330a",
+    "workload_item_id": "classification-08"
+  },
+  {
+    "sha256": "b9fd4e9506148eb7b8a01097b508029f9156f611c84f9a5568b9cc440a34faa3",
+    "workload_item_id": "extraction-01"
+  },
+  {
+    "sha256": "256cb1c8d55fa48b3e810c9d52b38bc665288b922514370d625924fa6acfad5f",
+    "workload_item_id": "extraction-02"
+  },
+  {
+    "sha256": "d538a72eeef624e3c0b554e7ed47d28eddd220352fec8e050775bbf1dcf9585a",
+    "workload_item_id": "extraction-03"
+  },
+  {
+    "sha256": "b08990dd9d3b1eee3cf5ed42c44b5f932e87c3a48c3faf401c1cf362a441a914",
+    "workload_item_id": "extraction-04"
+  },
+  {
+    "sha256": "df2d8e2a1824bc4acb2b6ec4a4ad4c3b63ad349825b12213f5998ea815ab392f",
+    "workload_item_id": "extraction-05"
+  },
+  {
+    "sha256": "07651c060165fdc024de30e8100c682a1f9c4c1a6e946f55367c30eb45063493",
+    "workload_item_id": "extraction-06"
+  },
+  {
+    "sha256": "db69e1dec9af8e117fd2a29c3cc90c757004e0a1771d2c5eb7db0271fef0066a",
+    "workload_item_id": "extraction-07"
+  },
+  {
+    "sha256": "3a14abd76cfbc386686e118c26de80cafa7edf93868bc627924ff569507c289f",
+    "workload_item_id": "extraction-08"
+  },
+  {
+    "sha256": "63a25ed8a97fd5deecd9f79fc4832c31f40974e863a21a2954ad1badda18a812",
+    "workload_item_id": "reasoning-01"
+  },
+  {
+    "sha256": "8adc7b8ab2ddccf1cf05fe996317d7d491a76270a6cb1c6de7fc2d8b2e69fd49",
+    "workload_item_id": "reasoning-02"
+  },
+  {
+    "sha256": "6d4ce8b826fb598962412df50fd80277f980ca5c196b48d95bb517965901b320",
+    "workload_item_id": "reasoning-03"
+  },
+  {
+    "sha256": "590d4c5e54ae2ae7d8490307c4020a468ae22c0a2a346a0d471dfae4964402ba",
+    "workload_item_id": "reasoning-04"
+  },
+  {
+    "sha256": "417e2c98a89f1fccd8922231bebecc4f11fe18a4e0b7fbec01ef271a35007d4e",
+    "workload_item_id": "intent-01"
+  },
+  {
+    "sha256": "bc0541c294e9ac64aa796bcaed01b93dde69b5648b838cb6cf513823adce2dab",
+    "workload_item_id": "intent-02"
+  },
+  {
+    "sha256": "01b6c23023fa9fdfa7a71f89bbc98acb4e6aae50a4841d8f80958a91a807d0b5",
+    "workload_item_id": "intent-03"
+  },
+  {
+    "sha256": "2b13b5c1b28a3e9b99c3e7534c6e0bceb2161c38d0dc80db7d254206a5f21da7",
+    "workload_item_id": "intent-04"
+  }
+]
