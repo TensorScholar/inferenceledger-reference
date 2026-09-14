@@ -15,8 +15,8 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/TensorScholar/inferenceledger"
-Issues = "https://github.com/TensorScholar/inferenceledger/issues"
+Repository = "https://github.com/TensorScholar/inferenceledger-reference"
+Issues = "https://github.com/TensorScholar/inferenceledger-reference/issues"
 
 [project.scripts]
 inferenceledger-smoke = "inference_engine.cli:main"
