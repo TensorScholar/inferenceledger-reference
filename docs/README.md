@@ -1,8 +1,15 @@
 # Documentation
 
-Read living docs in this order: `architecture.md` → `evidence.md` → `development.md`.
+This repository is a dated evidence and mechanism snapshot. Current engineering status, Task-5
+acquisition materials, and living strategy documents are maintained in
+[TensorScholar/inferenceledger](https://github.com/TensorScholar/inferenceledger). They are
+intentionally not duplicated here so this tree is not a second source of truth. Their absence from
+this snapshot does not mean those documents do not exist.
 
-## Canonical living documentation
+Read living docs **in this snapshot** in this order: `architecture.md` → `evidence.md` →
+`development.md`.
+
+## Living documentation in this snapshot
 
 | Doc | Role |
 | --- | --- |
@@ -19,6 +26,6 @@ and must not be read as a current roadmap.
 - [`11_OPENROUTER_GATEWAY_BILLING_VALIDATION.md`](11_OPENROUTER_GATEWAY_BILLING_VALIDATION.md)
 - [`12_OPENROUTER_EVIDENCE_SEMANTICS.md`](12_OPENROUTER_EVIDENCE_SEMANTICS.md)
 
-Numbering begins at 10 because earlier internal strategy and process documents were removed from
-the public reading path. The filenames are retained because they are part of historical
-provenance; the missing numbers are not missing public documentation.
+Numbering begins at 10 because earlier strategy, status, and process documents were omitted from
+this public reference surface. The filenames are retained for historical provenance. Current
+canonical status lives in TensorScholar/inferenceledger, not in reconstructed numbers 00–09.

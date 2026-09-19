@@ -1,7 +1,11 @@
 # Development and verification
 
-Canonical local validation is `make check`. Committed decision artifacts can be inspected with no
-provider credentials and no paid calls.
+Local validation in this snapshot is `make check`. Committed decision artifacts can be inspected
+with no provider credentials and no paid calls.
+
+Current canonical engineering and the current distribution CLI live in
+[TensorScholar/inferenceledger](https://github.com/TensorScholar/inferenceledger). This file
+describes only the historical snapshot in this repository.
 
 ## Supported Python
 
@@ -82,9 +86,12 @@ Scripts under `scripts/` separate the major phases:
 - `audit_evidence_manifest.py`: deterministic pilot-bundle manifest audit;
 - `run_openrouter_billing_validation.py`: frozen OpenRouter billing experiment tooling.
 
-The installed `inferenceledger-smoke` and compatibility `inference-smoke` aliases are
-reference-executor smoke utilities. They are not the primary public interface for inference-change
-decisions; the decision path is the evidence/analysis workflow described above.
+This snapshot preserves the historical reference CLI surface: `inferenceledger-smoke` and the
+compatibility alias `inference-smoke`. They are reference-executor smoke utilities, not the
+decision interface. The current canonical distribution CLI is `inferenceledger`, maintained in
+[TensorScholar/inferenceledger](https://github.com/TensorScholar/inferenceledger). Do not treat
+this snapshot's entry points as the current install identity. The decision path here remains the
+evidence/analysis workflow described above.
 
 Do not execute provider-backed scripts casually. They require an explicit experiment contract,
 credentials, and—where applicable—a spend authorization. The repository's default verification path
