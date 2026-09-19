@@ -2,6 +2,26 @@
 
 **Auditable decisions for model, provider, and execution-policy changes.**
 
+## Reference snapshot
+
+This repository is a **dated evidence and mechanism snapshot**. It is not the current canonical
+engineering repository and is not a second source of truth.
+
+Canonical engineering, living status, and Task-5 acquisition materials are maintained in
+[TensorScholar/inferenceledger](https://github.com/TensorScholar/inferenceledger).
+
+This snapshot does not represent customer validation, commercial validation, production readiness,
+or universal model or provider superiority.
+
+Current canonical Task-5 boundary (recorded there, not claimed as work completed in this snapshot):
+
+- external-pilot preparation has started;
+- the concrete pilot is not frozen;
+- execution readiness is blocked pending external facts;
+- pilot execution has not started;
+- provider/customer calls remain `0`;
+- authorized paid spend remains `$0`.
+
 InferenceLedger is a bounded inference-change assurance system that determines whether a specific
 model, provider, or execution-policy change is supported against predeclared quality, reliability,
 latency, and economic requirements for a defined workload and accounting basis, while preserving
@@ -80,8 +100,8 @@ metric, threshold, decision, timing, usage, or cost field was changed by that sa
 
 ## Walkthrough: IFStruct JSON-mode change
 
-This is the canonical inspection path. It is useful because it is **not** a clean win: latency
-improved, request success was complete, and the gate still abstained.
+This is the inspection path in this snapshot. It is useful because it is **not** a clean win:
+latency improved, request success was complete, and the gate still abstained.
 
 No provider credentials are required. Open these files in order:
 
@@ -102,7 +122,7 @@ latency does not offset that: the gate is an intersection.
 
 ## Quickstart
 
-Supported Python: `3.11` and `3.12`. Canonical validation:
+Supported Python: `3.11` and `3.12`. Local validation in this snapshot:
 
 ```bash
 python3.12 -m venv .venv
@@ -126,9 +146,13 @@ contract=decision-evidence-completeness-v1 satisfied=true present=14 explicitly_
 That result means required evidence surfaces are represented. It does **not** mean the evidence is
 favorable: the same record remains `INCONCLUSIVE`. Completeness is not sufficiency.
 
-`make check` never performs live provider execution. The installed `inferenceledger-smoke` and
-compatibility `inference-smoke` aliases are reference-executor utilities, not the decision
-interface. Provider credentials are needed only for optional live runs; do not commit secrets.
+`make check` never performs live provider execution. This snapshot preserves the historical
+reference CLI surface: `inferenceledger-smoke` and the compatibility alias `inference-smoke`.
+They are reference-executor utilities, not the decision interface. The current canonical
+distribution CLI `inferenceledger` is maintained in
+[TensorScholar/inferenceledger](https://github.com/TensorScholar/inferenceledger). Do not treat
+this snapshot's entry points as the current install identity. Provider credentials are needed
+only for optional live runs; do not commit secrets.
 
 Details: [`docs/development.md`](docs/development.md).
 
@@ -138,10 +162,17 @@ Details: [`docs/development.md`](docs/development.md).
 ENGINEERING VERIFIED
 ```
 
-Committed mechanisms and retained experiments: attempt-chain accounting, explicit pricing
-provenance, acquisition semantics, pairing, segmentation, exact/paired statistics, absolute
-quality floors, non-compensatory gates, unknown/incomplete evidence handling, immutable historical
-decisions, and reconciliation semantics.
+This banner applies to **mechanisms and committed artifacts in this reference snapshot**. It does
+not mean production-ready, customer validated, externally validated, or commercially validated.
+Later canonical engineering (including Tasks 1–4 on the first comparative external-pilot path, and
+Task-5 preparation) is recorded in
+[TensorScholar/inferenceledger](https://github.com/TensorScholar/inferenceledger) and is not
+claimed as completed by this snapshot.
+
+Committed mechanisms and retained experiments in this snapshot: attempt-chain accounting, explicit
+pricing provenance, acquisition semantics, pairing, segmentation, exact/paired statistics,
+absolute quality floors, non-compensatory gates, unknown/incomplete evidence handling, immutable
+historical decisions, and reconciliation semantics.
 
 ```text
 EXTERNAL / CUSTOMER / EMPIRICAL VALIDATION NOT YET ESTABLISHED
