@@ -8,7 +8,8 @@ This repository is a **dated evidence and mechanism snapshot**. It is not the cu
 engineering repository and is not a second source of truth.
 
 Canonical engineering, living status, and Task-5 acquisition materials are maintained in
-[TensorScholar/inferenceledger](https://github.com/TensorScholar/inferenceledger).
+[TensorScholar/inferenceledger](https://github.com/TensorScholar/inferenceledger). This reference
+repository is not a source of truth for that current private engineering state.
 
 This snapshot does not represent customer validation, commercial validation, production readiness,
 or universal model or provider superiority.
@@ -53,6 +54,25 @@ flowchart TD
 
 The evidence core is intentionally sharper than the execution edge. Module mapping:
 [`docs/architecture.md`](docs/architecture.md).
+
+## Public surface
+
+The figures below explain this snapshot's design and evidence boundary. They are presentation
+artifacts for this dated tree. They do not update, and are not a substitute for, the canonical
+engineering repository.
+
+| Artifact | What it shows |
+| --- | --- |
+| [Architecture board](docs/public-surface/architecture.png) | Freeze → capture → ledger → verify → decide. |
+| [Decision-flow board](docs/public-surface/decision-flow.png) | Evidence → validation → gate → `APPROVE` / `REJECT` / `ABSTAIN`. |
+| [Evidence board](docs/public-surface/evidence.png) | Retained outcomes already indexed in [`docs/evidence.md`](docs/evidence.md). |
+| [Engineering evidence brief](docs/public-surface/engineering-evidence-brief.pdf) | One-page brief of the same boundary. |
+
+![Architecture board: freeze, capture, ledger, verify, decide](docs/public-surface/architecture.png)
+
+![Decision-flow board: evidence, validation, gate, verdict](docs/public-surface/decision-flow.png)
+
+![Evidence board: retained snapshot outcomes](docs/public-surface/evidence.png)
 
 ## Why averages are not a decision
 
@@ -196,7 +216,7 @@ src/          core implementation
 tests/        correctness and evidence-semantics tests
 benchmarks/   frozen workloads, experiment definitions, retained evidence
 scripts/      reproducible experiment / comparison / decision-audit utilities
-docs/         architecture, evidence model, development, historical protocols
+docs/         architecture, evidence model, development, historical protocols, public-surface figures
 ```
 
 ## License

@@ -9,6 +9,19 @@ this snapshot does not mean those documents do not exist.
 Read living docs **in this snapshot** in this order: `architecture.md` → `evidence.md` →
 `development.md`.
 
+## Public surface
+
+Figures in [`public-surface/`](public-surface/) explain this snapshot's design and evidence
+boundary. They are not a source of truth for the current private engineering state in
+TensorScholar/inferenceledger.
+
+| Artifact | Role |
+| --- | --- |
+| [`architecture.png`](public-surface/architecture.png) | Freeze → capture → ledger → verify → decide. |
+| [`decision-flow.png`](public-surface/decision-flow.png) | Evidence → validation → gate → verdict. |
+| [`evidence.png`](public-surface/evidence.png) | Retained outcomes from the committed experiments. |
+| [`engineering-evidence-brief.pdf`](public-surface/engineering-evidence-brief.pdf) | One-page brief of the same boundary. |
+
 ## Living documentation in this snapshot
 
 | Doc | Role |
